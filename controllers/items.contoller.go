@@ -43,6 +43,7 @@ func (c *controllers) GetItems(ctx *gin.Context) {
 		Page:      params.Page,
 		TotalData: total,
 	}
+	fmt.Println("KONTOL")
 	ctx.JSON(http.StatusOK, res)
 }
 
