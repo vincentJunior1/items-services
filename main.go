@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"items/helpers"
 	"items/routes"
 	"os"
@@ -16,7 +15,6 @@ import (
 )
 
 func main() {
-	fmt.Println("Hello world")
 	godotenv.Load(".env")
 	// Depedency Injection
 	log := helpers.InitializeLogging()

@@ -37,6 +37,10 @@ func (r *Router) StartServer() error {
 	items.POST("/", r.Controllers.CreateItems)
 	items.GET("/", r.Controllers.GetItems)
 
+	auth := r.Gin.Group("/auth")
+	auth.POST("/register", r.Controllers.Register)
+	auth.POST("/login", r.Controllers.Login)
+
 	if err := helpers.StartGinServer(r.Gin); err != nil {
 		r.Log.Println("Start Server Err")
 		return err

@@ -18,7 +18,9 @@ type (
 	}
 
 	MysqlDatabase interface {
+		Register(ctx *gin.Context, data mapping.User) error
 		CreateItems(ctx *gin.Context, data mapping.Items) error
+		Login(ctx *gin.Context, email string) (mapping.User, error)
 		GetItems(ctx *gin.Context, params cModels.ParamsGetItems) ([]mapping.Items, int64, error)
 	}
 )

@@ -3,7 +3,7 @@ package models
 type Response struct {
 	Meta MetaRes     `json:"meta"`
 	Data interface{} `json:"data,omitempty"`
-	Page Pagination  `json:"pagination,omitempty"`
+	Page *Pagination `json:"pagination,omitempty"`
 }
 
 type MetaRes struct {

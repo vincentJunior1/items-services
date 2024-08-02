@@ -13,6 +13,8 @@ type (
 	}
 
 	Controllers interface {
+		Login(ctx *gin.Context)
+		Register(ctx *gin.Context)
 		GetItems(ctx *gin.Context)
 		CreateItems(ctx *gin.Context)
 	}
